@@ -87,3 +87,5 @@ If you want to contribute, feel free to fork the repository and submit improveme
 For inquiries or collaboration:
 Developer: isaiah david oghenefejiro
 Email: davidoghenefejiroisaiah@gmail.com
+
+contact me for more projects
