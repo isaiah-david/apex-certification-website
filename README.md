@@ -18,15 +18,6 @@ Secure backend structure
 
 Clean & maintainable codebase
 
-📂 Folder Structure
-apex-certification-website/
-├── assets/
-├── css/
-├── js/
-├── pages/
-├── includes/
-├── admin/
-└── index.php
 
 🛠️ Technologies Used
 
