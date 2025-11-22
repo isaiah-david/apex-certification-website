@@ -1,59 +1,240 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Apex Certification Company Website
+A professional, responsive website for Apex Certification Company Limited built with Laravel, featuring ISO certification services, training programs, and competency management solutions.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+🚀 Features
+Professional Design: Modern, responsive layout with gradient themes and animations
 
-## About Laravel
+Multi-page Structure: Home, About, Services, and Contact pages
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+ISO Certification Services: Comprehensive certification services for various standards
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Training Programs: Professional development and auditor training
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Contact Management: Functional contact form with validation
 
-## Learning Laravel
+SEO Optimized: Meta tags, Open Graph, and structured data
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+Mobile Responsive: Fully responsive design for all devices
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+📋 Pages
+Home: Hero section with video background, services overview, accreditations, testimonials
 
-## Laravel Sponsors
+About: Company overview, mission, vision, business approach, organizational structure
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Services: ISO certification services, training programs, service areas by industry
 
-### Premium Partners
+Contact: Contact form, office information, business hours, location map
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+🛠️ Technology Stack
+Backend: Laravel 10.x
 
-## Contributing
+Frontend: Bootstrap 5.3, Font Awesome 6.0
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Styling: Custom CSS with CSS variables
 
-## Code of Conduct
+Fonts: Google Fonts (Montserrat, Playfair Display, Inter, Source Sans Pro)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Icons: Font Awesome
 
-## Security Vulnerabilities
+JavaScript: Vanilla JS with Bootstrap components
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+📦 Installation
+Prerequisites
+PHP 8.1 or higher
 
-## License
+Composer
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Node.js and NPM
+
+MySQL/PostgreSQL/SQLite
+
+Setup Instructions
+Clone the repository
+
+bash
+git clone https://github.com/isaiah-david/apex-certification-website.git
+cd apex-certification-website
+Install PHP dependencies
+
+bash
+composer install
+Install frontend dependencies
+
+bash
+npm install
+Environment setup
+
+bash
+cp .env.example .env
+php artisan key:generate
+Configure environment variables
+Edit .env file with your database configuration:
+
+env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=apex_certification
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+Run migrations
+
+bash
+php artisan migrate
+Build frontend assets
+
+bash
+npm run build
+Create storage link
+
+bash
+php artisan storage:link
+Serve the application
+
+bash
+php artisan serve
+Visit http://localhost:8000 to view the website.
+
+🎨 Customization
+Colors and Themes
+The project uses CSS custom properties for easy theming. Modify the color scheme in resources/views/layouts/app.blade.php:
+
+css
+:root {
+    --primary-color: #1a365d;
+    --secondary-color: #2b6cb0;
+    --gold-color: #d4af37;
+    /* Add your custom colors */
+}
+Adding New Pages
+Create a new controller: php artisan make:controller NewPageController
+
+Add route in routes/web.php
+
+Create blade template in resources/views/
+
+Update navigation in layout file
+
+Content Updates
+Text Content: Edit respective blade files in resources/views/
+
+Images: Add to public/images/ or storage/app/public/images/
+
+Icons: Use Font Awesome classes or add custom SVG icons
+
+📁 Project Structure
+text
+apex-certification-website/
+├── app/
+│   ├── Http/
+│   │   └── Controllers/
+│   │       ├── HomeController.php
+│   │       ├── AboutController.php
+│   │       ├── ServicesController.php
+│   │       └── ContactController.php
+├── resources/
+│   └── views/
+│       ├── layouts/
+│       │   └── app.blade.php
+│       ├── home.blade.php
+│       ├── about.blade.php
+│       ├── services.blade.php
+│       └── contact.blade.php
+├── routes/
+│   └── web.php
+├── public/
+│   ├── css/
+│   ├── js/
+│   └── images/
+└── storage/
+    └── app/
+        └── public/
+            ├── icons/
+            └── images/
+🌐 Deployment
+For Production
+Environment Configuration
+
+bash
+APP_ENV=production
+APP_DEBUG=false
+Optimize Application
+
+bash
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
+Set up web server (Apache/Nginx) to point to the public directory
+
+Deployment Platforms
+Shared Hosting: Upload files via FTP, set document root to public
+
+VPS/Cloud: Use Laravel Forge, Ploi, or manual setup
+
+PaaS: Heroku, Laravel Vapor, Railway
+
+📞 Contact Information
+Apex Certification Company Limited
+
+Address:
+
+Phone: 
+
+Email: davidoghenefejiroisaiah@gmail.com
+
+Business Hours: Monday-Friday 8:00 AM - 5:00 PM, Saturday 9:00 AM - 1:00 PM
+
+🐛 Troubleshooting
+Common Issues
+Icons not displaying
+
+Check Font Awesome CDN link
+
+Verify icon classes are correct
+
+Contact form not working
+
+Check mail configuration in .env
+
+Verify form validation rules
+
+Images not loading
+
+Run php artisan storage:link
+
+Check file paths in blade templates
+
+CSS/JS not updating
+
+Run npm run build or npm run dev
+
+Clear cache: php artisan cache:clear
+
+🤝 Contributing
+Fork the project
+
+Create a feature branch: git checkout -b feature/amazing-feature
+
+Commit changes: git commit -m 'Add amazing feature'
+
+Push to branch: git push origin feature/amazing-feature
+
+Open a Pull Request
+
+📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+🙏 Acknowledgments
+Laravel Framework
+
+Bootstrap
+
+Font Awesome
+
+Google Fonts
+
+Mixkit for video assets
+
+Built with ❤️ for Apex Certification Company Limited
+
+For support or queries, contact davidoghenefejiroisaiah@gmail.com
